@@ -9,6 +9,7 @@ module.exports = {
     category : "info",
     description : "Returns user info",
     run : async (client,message,args)=>{
+        const channel = message.guild.channels.find(channel => channel.name ==="botresponse");
         const member=getMember(message,args.join(" "));
         //member variables
         const joined = formatDate(member.joinedAt);
@@ -21,7 +22,7 @@ module.exports = {
         .setColor(member.displayHexColor === "#000000" ? "#ffffff" : member.displayHexColor)
         .addField("Member Information",stripIndents`**> Display Name : ** ${member.displayName}
         **> Joined at : ** ${joined}
-        **> Roles : ${role}`,true)
+        **> Roles : ** ${role}`,true)
         .addField("User information",stripIndents`**> ID: **${member.user.id}
         **> Username : ** ${member.user.username}
         **> Discord Tag : ** ${member.user.tag}
@@ -30,6 +31,6 @@ module.exports = {
         if(member.user.presence.game)
         embed.addField("Currently playing",`**> Name :** ${member.user.presence.game.name}`)
 
-        message.channel.send(embed);
+        channel.send(embed);
     }
 }

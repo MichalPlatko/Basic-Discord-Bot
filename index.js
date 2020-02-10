@@ -23,7 +23,7 @@ client.on("ready",()=>{
     client.user.setPresence({
         status:"online",
         game:{
-            name : "development v 1.0.0",
+            name : "type !help for commands!",
             type : "PLAYING",
         }
     }
