@@ -1,6 +1,6 @@
 {
   "name": "quadriadiscordbot",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Quadria Discord Bot",
   "main": "index.js",
   "scripts": {
@@ -13,5 +13,20 @@
     "common-tags": "^1.8.0",
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichalPlatko/Basic-Discord-Bot.git"
+  },
+  "keywords": [
+    "QuadriaBot"
+  ],
+  "bugs": {
+    "url": "https://github.com/MichalPlatko/Basic-Discord-Bot/issues"
+  },
+  "engines": {
+    "node": "11.4"
+  },
+  "homepage": "https://github.com/MichalPlatko/Basic-Discord-Bot#readme"
 }
